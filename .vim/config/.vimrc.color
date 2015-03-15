@@ -1,0 +1,9 @@
+syntax enable
+set background=dark
+colorscheme solarized
+
+ " Popup menu
+ hi Pmenu guifg=black guibg=lightgray
+ hi PmenuSel guifg=yellow guibg=darkblue
+ hi PmenuSbar guifg=black
+ hi PmenuThumb guifg=darkblue

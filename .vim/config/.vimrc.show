@@ -1,0 +1,14 @@
+set number
+
+set cursorline
+
+set showmatch
+
+" even if the current file is not saved, show another file
+set hidden
+
+set ruler
+
+set showcmd
+
+set norestorescreen=off

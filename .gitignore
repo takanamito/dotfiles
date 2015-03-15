@@ -1,0 +1,5 @@
+*.swp
+.vim/.bash_history
+.DS_Store
+
+.private.conf

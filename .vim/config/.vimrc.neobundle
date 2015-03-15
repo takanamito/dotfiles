@@ -1,0 +1,54 @@
+" Plugin read start
+set nocompatible
+filetype off
+
+if has('vim_starting')
+  set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
+
+" completion by using cache
+NeoBundle 'Shougo/neocomplcache'
+
+" snippet using neocomplcache
+NeoBundle 'Shougo/neosnippet', {
+            \ 'depends' : 'Shougo/neocomplcache'
+          \ }
+
+" rsense in neocomplcache
+NeoBundle 'Shougo/neocomplcache-rsense', {
+            \ 'depends' : 'Shougo/neocomplcache',
+            \ 'autoload' : { 'filetypes' : 'ruby' }
+          \ }
+
+" showing indents
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
+" showing functions using ctags
+NeoBundle 'vim-scripts/taglist.vim'
+
+" sudo
+NeoBundle 'vim-scripts/sudo.vim'
+
+" syntax checking
+NeoBundle 'scrooloose/syntastic'
+
+" css3 html5 syntax
+NeoBundle 'css3-syntax-plus'
+
+" javascript indent
+NeoBundle 'pangloss/vim-javascript'
+
+" omnicomp for html5
+" エラー吐くので削除
+"NeoBundle 'othree/html5.vim'
+
+" Plugin reading finish
+filetype plugin indent on
+
+" php
+NeoBundle 'violetyk/neocomplete-php.vim'
+let g:neocomplete_php_locale = 'ja'
