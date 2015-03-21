@@ -15,14 +15,14 @@ NeoBundle 'Shougo/neocomplcache'
 
 " snippet using neocomplcache
 NeoBundle 'Shougo/neosnippet', {
-            \ 'depends' : 'Shougo/neocomplcache'
-          \ }
+      \ 'depends' : 'Shougo/neocomplcache'
+      \ }
 
 " rsense in neocomplcache
 NeoBundle 'Shougo/neocomplcache-rsense', {
-            \ 'depends' : 'Shougo/neocomplcache',
-            \ 'autoload' : { 'filetypes' : 'ruby' }
-          \ }
+      \ 'depends' : 'Shougo/neocomplcache',
+      \ 'autoload' : { 'filetypes' : 'ruby' }
+      \ }
 
 " showing indents
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -42,13 +42,12 @@ NeoBundle 'css3-syntax-plus'
 " javascript indent
 NeoBundle 'pangloss/vim-javascript'
 
-" omnicomp for html5
-" エラー吐くので削除
-"NeoBundle 'othree/html5.vim'
-
 " Plugin reading finish
 filetype plugin indent on
 
 " php
 NeoBundle 'violetyk/neocomplete-php.vim'
 let g:neocomplete_php_locale = 'ja'
+
+" NERDTree
+NeoBundle 'scrooloose/nerdtree'

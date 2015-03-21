@@ -1,8 +1,10 @@
 css3-syntax-plus
+neobundle.vim
 neocomplcache
 neocomplcache-rsense
 neocomplete-php.vim
 neosnippet
+nerdtree
 sudo.vim
 syntastic
 taglist.vim
