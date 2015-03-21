@@ -10,3 +10,4 @@ syntastic
 taglist.vim
 vim-indent-guides
 vim-javascript
+vim-quickrun

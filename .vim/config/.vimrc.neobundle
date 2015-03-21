@@ -47,7 +47,9 @@ filetype plugin indent on
 
 " php
 NeoBundle 'violetyk/neocomplete-php.vim'
-let g:neocomplete_php_locale = 'ja'
 
 " NERDTree
 NeoBundle 'scrooloose/nerdtree'
+
+" vim-quickrun
+NeoBundle 'thinca/vim-quickrun'
