@@ -3,11 +3,23 @@
 ## Install
 ```
 $ ./setup.sh
+$ vim
+:NeoBundleInstall
 ```
 
-## NERDTree
-### 起動
+## プラグイン
+### vim-quickrun
+#### 実行
+ノーマルモードで
+\r
+
+### NERDTree
+#### 起動
 Ctrl + e
 
-### カーソル移動
+#### カーソル移動
 Ctrl + w → hjkl
+
+### Sudo.vim
+#### sudoで開き直す
+:e sudo:%
