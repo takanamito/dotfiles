@@ -5,6 +5,4 @@
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
 
-.vim/bundle/.neobundle/*
-
 .private.conf
