@@ -8,6 +8,7 @@ nerdtree
 sudo.vim
 syntastic
 taglist.vim
+vim-gitgutter
 vim-indent-guides
 vim-javascript
 vim-quickrun

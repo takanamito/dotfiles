@@ -7,6 +7,7 @@ if has('vim_starting')
 endif
 
 call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
+" Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
 
