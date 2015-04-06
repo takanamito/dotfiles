@@ -46,9 +46,6 @@ NeoBundle 'pangloss/vim-javascript'
 " Plugin reading finish
 filetype plugin indent on
 
-" php
-NeoBundle 'violetyk/neocomplete-php.vim'
-
 " NERDTree
 NeoBundle 'scrooloose/nerdtree'
 

@@ -7,8 +7,11 @@ let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 "inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 
-" neocomplete-php
-let g:neocomplete_php_locale = 'ja'
+" 
+let g:neocomplcache_dictionary_filetype_lists = {
+\ 'default' : '',
+\ 'php' : $HOME.'/dotfiles/.vim/dict/php.dict'
+\ }
 
 " vim-quickrun
 " set splitright
