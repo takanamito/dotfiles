@@ -1,7 +1,12 @@
 # dotfiles
 
+## clone
+ホームディレクトリにclone
+
 ## Install
 ```
+$ cd ~/dotfiles
+$ git submodule init && git submodule update
 $ ./setup.sh
 $ vim
 :NeoBundleInstall
