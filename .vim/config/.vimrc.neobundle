@@ -43,6 +43,9 @@ NeoBundle 'css3-syntax-plus'
 " javascript indent
 NeoBundle 'pangloss/vim-javascript'
 
+" coffeescript
+NeoBundle 'kchmck/vim-coffee-script'
+
 " Plugin reading finish
 filetype plugin indent on
 
