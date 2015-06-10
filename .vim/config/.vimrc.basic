@@ -30,6 +30,16 @@ set backspace=indent,eol,start
 
 set nobackup
 
+" show unvisible character
+set list
+set listchars=tab:>-,trail:.
+
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+
 " html5 detection
 " HTML 5 tags
 syn keyword htmlTagName contained article aside audio bb canvas command
