@@ -10,8 +10,10 @@ inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 " 
 let g:neocomplcache_dictionary_filetype_lists = {
 \ 'default' : '',
+\ 'ruby' : $HOME.'/dotfiles/.vim/dict/ruby.dict',
 \ 'php' : $HOME.'/dotfiles/.vim/dict/php.dict',
-\ 'javascript' : $HOME.'/dotfiles/.vim/dict/javascript.dict'
+\ 'javascript' : $HOME.'/dotfiles/.vim/dict/javascript.dict',
+\ 'coffee' : $HOME.'/dotfiles/.vim/dict/javascript.dict'
 \ }
 
 " vim-quickrun
