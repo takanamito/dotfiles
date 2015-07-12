@@ -32,7 +32,7 @@ set nobackup
 
 " show unvisible character
 set list
-set listchars=tab:>-,trail:.
+set listchars=tab:>-,trail:_
 
 augroup highlightIdegraphicSpace
   autocmd!
