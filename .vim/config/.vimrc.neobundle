@@ -26,7 +26,7 @@ NeoBundle 'Shougo/neocomplcache-rsense', {
       \ }
 
 " showing indents
-NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
 
 " showing functions using ctags
 NeoBundle 'vim-scripts/taglist.vim'
@@ -46,9 +46,6 @@ NeoBundle 'pangloss/vim-javascript'
 " coffeescript
 NeoBundle 'kchmck/vim-coffee-script'
 
-" Plugin reading finish
-filetype plugin indent on
-
 " NERDTree
 NeoBundle 'scrooloose/nerdtree'
 
@@ -60,3 +57,10 @@ NeoBundle 'airblade/vim-gitgutter'
 
 " ctags
 NeoBundle 'szw/vim-tags'
+
+" slim syntax highlight
+NeoBundle 'slim-template/vim-slim'
+
+" Plugin reading finish
+syntax enable
+filetype plugin indent on
