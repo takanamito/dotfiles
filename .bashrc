@@ -3,6 +3,9 @@ alias la="ls -a"
 alias ll="ls -l"
 alias cl="clear"
 
+# Rails
+alias be="bundle exec"
+
 #vim
 alias vi="vim"
 
@@ -33,3 +36,4 @@ function cdls() {
     ls;
 }
 
+eval "$(direnv hook bash)"
