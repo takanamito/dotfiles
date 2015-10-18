@@ -3,6 +3,9 @@ alias la="ls -a"
 alias ll="ls -l"
 alias cl="clear"
 
+# Rails
+alias be="bundle exec"
+
 #vim
 alias vi="vim"
 
@@ -13,6 +16,7 @@ alias tm="tmux"
 alias g="git"
 alias ga="git add"
 alias gc="git commit -m"
+alias gco="git checkout"
 alias gb="git branch"
 alias gp="git push"
 alias gs="git status"
