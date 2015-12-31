@@ -2,7 +2,6 @@
 .vim/.bash_history
 .DS_Store
 
-.vim/bundle
-.vim/bundle/.neobundle/*
+.vim/bundle/*
 
 .private.conf
