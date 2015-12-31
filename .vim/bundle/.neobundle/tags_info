@@ -1,4 +1,5 @@
 css3-syntax-plus
+indentLine
 neobundle.vim
 neocomplcache
 neocomplcache-rsense
@@ -9,6 +10,7 @@ syntastic
 taglist.vim
 vim-coffee-script
 vim-gitgutter
-vim-indent-guides
 vim-javascript
 vim-quickrun
+vim-slim
+vim-tags
