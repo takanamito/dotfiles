@@ -1,4 +1,6 @@
 # zshのインストール
+# sudo vim /etc/shells
+# /usr/local/bin/zsh
 chsh -s /usr/local/bin/zsh
 
 # oh-my-zshのインストール
