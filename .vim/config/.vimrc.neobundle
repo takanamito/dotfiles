@@ -9,7 +9,6 @@ endif
 call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 " completion by using cache
 NeoBundle 'Shougo/neocomplcache'
@@ -60,6 +59,7 @@ NeoBundle 'szw/vim-tags'
 
 " slim syntax highlight
 NeoBundle 'slim-template/vim-slim'
+call neobundle#end()
 
 " Plugin reading finish
 syntax enable
