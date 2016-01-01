@@ -46,6 +46,12 @@ function cdls() {
 eval "$(direnv hook bash)"
 export EDITOR=vim
 
+# peco
+if [ -f ~/dotfiles/.peco.conf ]; then
+    . ~/dotfiles/.peco.conf
+fi
+
+# 非公開設定
 if [ -f ~/dotfiles/.private.conf ]; then
     . ~/dotfiles/.private.conf
 fi
