@@ -9,6 +9,10 @@ source $ZSH/oh-my-zsh.sh
 ZSH_THEME="bureau"
 export PATH="/usr/local/sbin:$PATH"
 
+# zsh設定
+setopt auto_cd
+
+# alias
 alias cd=cdls
 alias cdp="cd ~/project"
 alias la="ls -a"
