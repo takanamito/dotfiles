@@ -38,8 +38,12 @@ alias gp="git push"
 alias gs="git status"
 alias gd="git diff"
 
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 export EDITOR=vim
+
+# GO
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
 
 # peco
 if [ -f ~/dotfiles/.peco.conf ]; then
@@ -70,7 +74,23 @@ precmd () {
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
+# cdすると同時にls
 function cdls() {
     \cd $1;
     ls;
 }
+
+# PR開く
+function gpr() {
+  local current_branch_name=$(git symbolic-ref --short HEAD | xargs perl -MURI::Escape -e 'print uri_escape($ARGV[0]);')
+    hub browse -- pull/${current_branch_name}
+}
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/takanamito/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/takanamito/google-cloud-sdk/completion.zsh.inc'
+
+# homebrew
+export HOMEBREW_GITHUB_API_TOKEN=3f0b370dc7edc09fce2d968e8bae7beea37752b2

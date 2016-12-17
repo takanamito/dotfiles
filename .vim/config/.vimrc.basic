@@ -1,8 +1,7 @@
 vnoremap ; :
 
 " use OSs clipboard
-set clipboard=unnamed
-set clipboard=autoselect
+set clipboard+=autoselect
 
 " encoding settings
 set enc=utf-8

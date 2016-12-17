@@ -12,11 +12,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " completion by using cache
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete'
 
 " snippet using neocomplcache
 NeoBundle 'Shougo/neosnippet', {
       \ 'depends' : 'Shougo/neocomplcache'
       \ }
+
+NeoBundle 'Shougo/neosnippet-snippets'
 
 " rsense in neocomplcache
 NeoBundle 'Shougo/neocomplcache-rsense', {
