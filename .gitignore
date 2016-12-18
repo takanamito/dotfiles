@@ -3,5 +3,7 @@
 .DS_Store
 
 .vim/bundle/*
+.vim/bundle/.neobundle/install_info
+.vim/bundle/.neobundle/tags_info
 
 .private.conf

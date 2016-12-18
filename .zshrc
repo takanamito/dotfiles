@@ -85,12 +85,3 @@ function gpr() {
   local current_branch_name=$(git symbolic-ref --short HEAD | xargs perl -MURI::Escape -e 'print uri_escape($ARGV[0]);')
     hub browse -- pull/${current_branch_name}
 }
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/takanamito/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/takanamito/google-cloud-sdk/completion.zsh.inc'
-
-# homebrew
-export HOMEBREW_GITHUB_API_TOKEN=3f0b370dc7edc09fce2d968e8bae7beea37752b2
