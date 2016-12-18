@@ -7,7 +7,7 @@
 ```
 $ cd ~/dotfiles
 $ git submodule init && git submodule update
-$ ./setup.sh
+$ ./setup.sh # oh-my-zshが入ってない場合は2回実行
 $ vim
 :NeoBundleInstall
 ```
