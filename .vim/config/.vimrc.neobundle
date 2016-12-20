@@ -62,6 +62,9 @@ NeoBundle 'szw/vim-tags'
 
 " slim syntax highlight
 NeoBundle 'slim-template/vim-slim'
+
+" git
+NeoBundle 'tpope/vim-fugitive'
 call neobundle#end()
 
 " Plugin reading finish
