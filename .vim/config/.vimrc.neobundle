@@ -65,6 +65,9 @@ NeoBundle 'slim-template/vim-slim'
 
 " git
 NeoBundle 'tpope/vim-fugitive'
+
+NeoBundle 'elzr/vim-json'
+
 call neobundle#end()
 
 " Plugin reading finish
