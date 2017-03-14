@@ -7,7 +7,7 @@ source $ZSH/oh-my-zsh.sh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
 
 # zsh設定
 setopt auto_cd
