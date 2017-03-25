@@ -18,6 +18,8 @@ NeoBundle 'Shougo/neosnippet', {
       \ 'depends' : 'Shougo/neocomplcache'
       \ }
 
+NeoBundle 'Shougo/neosnippet-snippets'
+
 " rsense in neocomplcache
 NeoBundle 'Shougo/neocomplcache-rsense', {
       \ 'depends' : 'Shougo/neocomplcache',
