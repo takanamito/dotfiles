@@ -27,6 +27,9 @@ set lazyredraw
 " use backspace when insert mode
 set backspace=indent,eol,start
 
+" display double quote
+let g:vim_json_syntax_conceal = 0
+
 set nobackup
 
 " show unvisible character
