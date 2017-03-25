@@ -4,6 +4,7 @@ neobundle.vim
 neocomplcache
 neocomplcache-rsense
 neosnippet
+neosnippet-snippets
 nerdtree
 sudo.vim
 syntastic
