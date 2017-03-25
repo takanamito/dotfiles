@@ -12,6 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " completion by using cache
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete'
 
 " snippet using neocomplcache
 NeoBundle 'Shougo/neosnippet', {
@@ -61,6 +62,12 @@ NeoBundle 'szw/vim-tags'
 
 " slim syntax highlight
 NeoBundle 'slim-template/vim-slim'
+
+" git
+NeoBundle 'tpope/vim-fugitive'
+
+NeoBundle 'elzr/vim-json'
+
 call neobundle#end()
 
 " Plugin reading finish

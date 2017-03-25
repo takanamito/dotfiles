@@ -7,7 +7,7 @@ source $ZSH/oh-my-zsh.sh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # zsh設定
@@ -39,8 +39,12 @@ alias gp="git push"
 alias gs="git status"
 alias gd="git diff"
 
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 export EDITOR=vim
+
+# GO
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
 
 # peco
 if [ -f ~/dotfiles/.peco.conf ]; then
@@ -71,7 +75,14 @@ precmd () {
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
+# cdすると同時にls
 function cdls() {
     \cd $1;
     ls;
+}
+
+# PR開く
+function gpr() {
+  local current_branch_name=$(git symbolic-ref --short HEAD | xargs perl -MURI::Escape -e 'print uri_escape($ARGV[0]);')
+    hub browse -- pull/${current_branch_name}
 }

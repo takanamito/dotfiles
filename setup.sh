@@ -10,7 +10,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 read -p "install dotfiles? y/n " yn
 if [ $yn = "y" -o $yn = "Y" ]; then
-    DOT_FILES=(.zshrc .bashrc .bash_profile .gitignore_global .gitconfig .gitignore .gvimrc .tmux.conf .vimrc .vim)
+    DOT_FILES=(.zshrc .bashrc .bash_profile .gitignore_global .gitconfig .gitignore .gvimrc .tmux.conf .vimrc .vim .bin)
 
     echo "installing dotfiles...\n"
     for file in ${DOT_FILES[@]}
