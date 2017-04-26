@@ -8,6 +8,7 @@ source $ZSH/oh-my-zsh.sh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
 export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # zsh設定
 setopt auto_cd

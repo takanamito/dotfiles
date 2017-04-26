@@ -68,6 +68,9 @@ NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'elzr/vim-json'
 
+" for double quote not cconceal
+NeoBundle 'elzr/vim-json'
+
 call neobundle#end()
 
 " Plugin reading finish
