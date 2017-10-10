@@ -71,6 +71,9 @@ NeoBundle 'elzr/vim-json'
 " for double quote not cconceal
 NeoBundle 'elzr/vim-json'
 
+" for auto :set paste
+NeoBundle 'ConradIrwin/vim-bracketed-paste'
+
 call neobundle#end()
 
 " Plugin reading finish
