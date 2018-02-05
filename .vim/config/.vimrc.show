@@ -1,6 +1,7 @@
 set number
 
-set cursorline
+" 行移動が重くなるので非表示
+" set cursorline
 
 set showmatch
 
