@@ -35,11 +35,6 @@ export EDITOR=vim
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
 
-# peco
-if [ -f ~/dotfiles/.peco.conf ]; then
-    . ~/dotfiles/.peco.conf
-fi
-
 # 非公開設定
 if [ -f ~/dotfiles/.private.conf ]; then
     . ~/dotfiles/.private.conf
@@ -56,6 +51,11 @@ plugins=(git bundler osx rake ruby)
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/takanamito/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# peco
+if [ -f ~/dotfiles/.peco.conf ]; then
+    . ~/dotfiles/.peco.conf
+fi
 
 # ブランチ情報を表示
 autoload -Uz vcs_info
