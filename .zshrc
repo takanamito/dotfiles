@@ -1,7 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/takanamito/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -29,15 +25,8 @@ alias vi="vim"
 #tmux
 alias tm="tmux"
 
-# git
-alias g="git"
-alias ga="git add"
-alias gc="git commit -m"
-alias gco="git checkout"
-alias gb="git branch"
-alias gp="git push"
-alias gs="git status"
-alias gd="git diff"
+# chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
 eval "$(direnv hook zsh)"
 export EDITOR=vim
@@ -63,6 +52,10 @@ eval "$(rbenv init -)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git bundler osx rake ruby)
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/takanamito/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # ブランチ情報を表示
 autoload -Uz vcs_info
