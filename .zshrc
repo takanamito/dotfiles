@@ -57,6 +57,10 @@ if [ -f ~/dotfiles/.peco.conf ]; then
     . ~/dotfiles/.peco.conf
 fi
 
+# ghq
+alias gh='cd $(ghq root)/$(ghq list | peco)'
+alias b='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
 # ブランチ情報を表示
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
