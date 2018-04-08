@@ -58,8 +58,19 @@ if [ -f ~/dotfiles/.peco.conf ]; then
 fi
 
 # ghq
-alias gh='cd $(ghq root)/$(ghq list | peco)'
+# alias gh='cd $(ghq root)/$(ghq list | peco)'
 alias b='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^g' peco-src
 
 # ブランチ情報を表示
 autoload -Uz vcs_info
@@ -76,10 +87,4 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 function cdls() {
     \cd $1;
     ls;
-}
-
-# PR開く
-function gpr() {
-  local current_branch_name=$(git symbolic-ref --short HEAD | xargs perl -MURI::Escape -e 'print uri_escape($ARGV[0]);')
-    hub browse -- pull/${current_branch_name}
 }
