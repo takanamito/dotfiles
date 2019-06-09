@@ -2,10 +2,10 @@
     name = takanamito
     email = takanamito0928@gmail.com
 [core]
-    excludesfile = /Users/takanamito/.gitignore
+    excludesfile = ~/.gitignore_global
 [pager]
     log = diff-highlight | less
     show = diff-highlight | less
     diff = diff-highlight | less
 [push]
-	default = simple
+    default = simple
