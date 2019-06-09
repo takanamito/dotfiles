@@ -9,6 +9,9 @@ export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 # zsh設定
 setopt auto_cd
 
+# hub設定
+eval "$(hub alias -s)"
+
 # alias
 alias cd=cdls
 alias cdp="cd ~/project"
@@ -20,7 +23,7 @@ alias cl="clear"
 alias be="bundle exec"
 
 #vim
-alias vi="vim"
+alias v="vim"
 
 #tmux
 alias tm="tmux"
