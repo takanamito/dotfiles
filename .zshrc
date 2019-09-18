@@ -1,9 +1,8 @@
-# Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
-export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
+export PATH="/usr/local/sbin:/Users/takahiro.kiso/.bin:$PATH"
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # zsh設定
@@ -20,6 +19,7 @@ alias ll="ls -l"
 alias cl="clear"
 
 # Rails
+alias b="bundle"
 alias be="bundle exec"
 
 #vim
@@ -52,7 +52,7 @@ eval "$(rbenv init -)"
 plugins=(git bundler osx rake ruby)
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/takanamito/.oh-my-zsh
+export ZSH=/Users/takahiro.kiso/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # peco
@@ -91,3 +91,5 @@ function cdls() {
     \cd $1;
     ls;
 }
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
