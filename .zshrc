@@ -62,7 +62,7 @@ fi
 
 # ghq
 # alias gh='cd $(ghq root)/$(ghq list | peco)'
-alias b='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias hb='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 function peco-src () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
