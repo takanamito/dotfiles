@@ -2,7 +2,7 @@
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
-export PATH="/usr/local/sbin:/Users/takahiro.kiso/.bin:$PATH"
+export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # zsh設定
@@ -52,7 +52,7 @@ eval "$(rbenv init -)"
 plugins=(git bundler osx rake ruby)
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/takahiro.kiso/.oh-my-zsh
+export ZSH=/Users/takanamito/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # peco
