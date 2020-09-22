@@ -9,3 +9,8 @@
     diff = diff-highlight | less
 [push]
     default = simple
+[pull]
+    rebase = true
+[ghq]
+    root = /Users/takanamito/.go/src
+    root = /Users/takanamito/ghq
