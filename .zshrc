@@ -18,6 +18,10 @@ alias la="ls -a"
 alias ll="ls -l"
 alias cl="clear"
 
+# brew
+alias berw="brew"
+alias brwe="brew"
+
 # Rails
 alias b="bundle"
 alias be="bundle exec"
