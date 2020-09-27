@@ -38,17 +38,19 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 eval "$(direnv hook zsh)"
 export EDITOR=vim
 
-# GO
-eval "$(goenv init -)"
-export GOPATH=$HOME/.go
-export PATH=$GOPATH/bin:$PATH
-
 # 非公開設定
 if [ -f ~/dotfiles/.private.conf ]; then
     . ~/dotfiles/.private.conf
 fi
 
 eval "$(rbenv init -)"
+
+# GO
+GOENV_ROOT="$HOME/.goenv"
+PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+PATH="$GOROOT/bin:$PATH"
+PATH="$PATH:$GOPATH/bin"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
