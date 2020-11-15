@@ -49,6 +49,7 @@ eval "$(rbenv init -)"
 GOENV_ROOT="$HOME/.goenv"
 PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
+GOPATH="$GOPATH:$HOME/ghq"
 PATH="$GOROOT/bin:$PATH"
 PATH="$PATH:$GOPATH/bin"
 
