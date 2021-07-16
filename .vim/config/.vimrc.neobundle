@@ -45,9 +45,6 @@ NeoBundle 'css3-syntax-plus'
 " javascript indent
 NeoBundle 'pangloss/vim-javascript'
 
-" coffeescript
-NeoBundle 'kchmck/vim-coffee-script'
-
 " NERDTree
 NeoBundle 'scrooloose/nerdtree'
 
