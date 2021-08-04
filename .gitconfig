@@ -14,3 +14,6 @@
 [ghq]
     root = /Users/takanamito/.go/src
     root = /Users/takanamito/ghq
+[alias]
+    # マージ済みのブランチを消す
+    dmb = !git branch --merged | egrep -v '\\*|main|master|development' | xargs git branch -d
