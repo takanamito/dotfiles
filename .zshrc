@@ -46,12 +46,15 @@ fi
 eval "$(rbenv init -)"
 
 # GO
-GOENV_ROOT="$HOME/.goenv"
-PATH="$GOENV_ROOT/bin:$PATH"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
-GOPATH="$GOPATH:$HOME/ghq"
-PATH="$GOROOT/bin:$PATH"
-PATH="$PATH:$GOPATH/bin"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
+# ghq
+# export GOPATH="$GOPATH:$HOME/ghq"
+export GOPATH="$HOME/ghq"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -99,5 +102,3 @@ function cdls() {
     \cd $1;
     ls;
 }
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"
