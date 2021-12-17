@@ -10,6 +10,13 @@ setopt auto_cd
 
 # hub設定
 eval "$(hub alias -s)"
+alias hb="hub browse"
+
+# cdすると同時にls
+function cdls() {
+    \cd $1;
+    ls;
+}
 
 # alias
 alias cd=cdls
@@ -97,8 +104,3 @@ precmd () {
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
-# cdすると同時にls
-function cdls() {
-    \cd $1;
-    ls;
-}
