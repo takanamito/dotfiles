@@ -18,6 +18,12 @@ function cdls() {
     ls;
 }
 
+# cdすると同時にls
+function cdls() {
+    \cd $1;
+    ls;
+}
+
 # alias
 alias cd=cdls
 alias cdp="cd ~/project"
