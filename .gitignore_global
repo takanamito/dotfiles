@@ -1,5 +1,4 @@
 .DS_Store
-.idea
 .circleci/config-2.0.yml
 .vscode
 out/*
