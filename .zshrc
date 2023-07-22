@@ -7,10 +7,10 @@ ZSH_THEME="bureau"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-export ZSH=/Users/takahiro.kiso/.oh-my-zsh
+export ZSH=/Users/takanamito/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/sbin:/Users/takahiro.kiso/.bin:$PATH"
+export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # cdすると同時にls
