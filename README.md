@@ -28,3 +28,7 @@ Ctrl + w → hjkl
 ### Sudo.vim
 #### sudoで開き直す
 :e sudo:%
+
+## その他
+### .gitconfig
+アカウントとghqホームディレクトリの設定
