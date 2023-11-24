@@ -1,17 +1,35 @@
-export EDITOR=vim
+# ~/.zshrc
 
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-ZSH_THEME="bureau"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Add wisely, as too many plugins slow down shell startup.
+# oh-my-zshからgit pluginを使うための設定
+ZSH=~/.oh-my-zsh
 plugins=(git)
-export ZSH=/Users/takanamito/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/sbin:/Users/takanamito/.bin:$PATH"
+eval "$(starship init zsh)"
+
+export PATH="$PATH:/usr/local/sbin:$HOME/.bin"
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
+
+# Dart
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
+# GO
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$PATH:$GOROOT/bin"
+export PATH="$PATH:$GOENV_ROOT/bin"
+
+export GOPATH="$HOME/ghq"
+export PATH="$PATH:$GOPATH/bin"
+export GOBIN="$GOPATH/bin"
+
+export PATH="$PATH:/opt/homebrew/opt/openjdk/bin"
+export PATH="$PATH:/opt/homebrew/opt/sqlite/bin"
+
+# zsh設定
+setopt auto_cd
+
+# hub設定
+eval "$(hub alias -s)"
 
 # cdすると同時にls
 function cdls() {
@@ -25,19 +43,12 @@ alias la="ls -a"
 alias ll="ls -l"
 alias cl="clear"
 
-# brew
+alias v="vim"
+alias tm="tmux"
 alias berw="brew"
 alias brwe="brew"
-
-# Rails
 alias b="bundle"
 alias be="bundle exec"
-
-#vim
-alias v="vim"
-
-#retmux
-alias tm="tmux"
 
 eval "$(direnv hook zsh)"
 eval "$(rbenv init -)"
@@ -48,22 +59,8 @@ if [ -f ~/dotfiles/.private.conf ]; then
     . ~/dotfiles/.private.conf
 fi
 
-# GO
-export GOROOT=/usr/local/opt/go/libexec
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
-
-# ghq
-export GOPATH="$HOME/ghq"
-export GHQ_ROOT="$HOME/ghq"
-alias hb='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
-
-# protoc
-export PATH="$PATH:$HOME/.pub-cache/bin"
-
-# Java
-JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
-PATH=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home/bin:$PATH
+eval "$(rbenv init -)"
+eval "$(goenv init -)"
 
 # peco
 if [ -f ~/dotfiles/.peco.conf ]; then
@@ -81,13 +78,5 @@ function peco-src () {
 zle -N peco-src
 bindkey '^g' peco-src
 
-# ブランチ情報を表示
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '[%b]'
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-RPROMPT="%1(v|%F{green}%1v%f|)"
+ulimit -n 10000
+
