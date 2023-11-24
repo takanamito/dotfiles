@@ -5,8 +5,6 @@ chsh -s /usr/local/bin/zsh
 
 # oh-my-zshのインストール
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# plugins=(git ruby osx bundler brew rails emoji-clock)
-# ZSH_THEME="bureau"
 
 read -p "install dotfiles? y/n " yn
 if [ $yn = "y" -o $yn = "Y" ]; then
