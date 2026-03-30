@@ -14,10 +14,7 @@ export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
 # GO
-export GOENV_ROOT="$HOME/.goenv"
 export PATH="$PATH:$GOROOT/bin"
-export PATH="$PATH:$GOENV_ROOT/bin"
-
 export GOPATH="$HOME/ghq"
 export PATH="$PATH:$GOPATH/bin"
 export GOBIN="$GOPATH/bin"
@@ -52,7 +49,6 @@ alias be="bundle exec"
 
 eval "$(direnv hook zsh)"
 eval "$(rbenv init -)"
-eval "$(nodenv init -)"
 
 # 非公開設定
 if [ -f ~/dotfiles/.private.conf ]; then
@@ -60,7 +56,6 @@ if [ -f ~/dotfiles/.private.conf ]; then
 fi
 
 eval "$(rbenv init -)"
-eval "$(goenv init -)"
 
 # peco
 if [ -f ~/dotfiles/.peco.conf ]; then
@@ -68,7 +63,7 @@ if [ -f ~/dotfiles/.peco.conf ]; then
 fi
 
 function peco-src () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  local selected_dir=$(find "$(ghq root)" -maxdepth 4 -name ".git" -type d -prune | sed 's|/.git$||' | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
     zle accept-line
@@ -80,3 +75,5 @@ bindkey '^g' peco-src
 
 ulimit -n 10000
 
+# Claude
+export PATH="$HOME/.local/bin:$PATH"
